@@ -7,6 +7,9 @@ cur=con.cursor()
 cur.execute("CREATE DATABASE IF NOT EXISTS Healthcare")
 #<---Change Database--->
 cur.execute("USE Healthcare")
+#<----Table creation part---->
+t1_cr='''CREATE TABLE IF NOT EXISTS Day1(TransactionId INT,PolicyId BIGINT,PolicyNumber INT,PolicYHolderName VARCHAR(20),PolicyStartDate VARCHAR(15),PolicyExpirationDate VARCHAR(15),PolicyType VARCHAR(25),ClaimID INT,ClaimType VARCHAR(20),ClaimApplyDate VARCHAR(15),ClaimServiceDate VARCHAR(15),ClaimStatus VARCHAR(10),ClaimCompletionDate VARCHAR(15))'''
+cur.execute(t1_cr)
 with open("Day1.csv",'r') as d1:
 		day1_data=list(csv.reader(d1,delimiter='|'))
 		
