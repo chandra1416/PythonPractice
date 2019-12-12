@@ -5,6 +5,8 @@ con=mysql.connector.connect(host="localhost",username="chandra",password="@chenn
 cur=con.cursor()
 #<--Database Creatation-->
 cur.execute("CREATE DATABASE IF NOT EXISTS Healthcare")
+#<---Change Database--->
+cur.execute("USE Healthcare")
 with open("Day1.csv",'r') as d1:
 		day1_data=list(csv.reader(d1,delimiter='|'))
 		
