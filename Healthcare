@@ -11,5 +11,16 @@ cur.execute("USE Healthcare")
 t1_cr='''CREATE TABLE IF NOT EXISTS Day1(TransactionId INT,PolicyId BIGINT,PolicyNumber INT,PolicYHolderName VARCHAR(20),PolicyStartDate VARCHAR(15),PolicyExpirationDate VARCHAR(15),PolicyType VARCHAR(25),ClaimID INT,ClaimType VARCHAR(20),ClaimApplyDate VARCHAR(15),ClaimServiceDate VARCHAR(15),ClaimStatus VARCHAR(10),ClaimCompletionDate VARCHAR(15))'''
 cur.execute(t1_cr)
 with open("Day1.csv",'r') as d1:
-		day1_data=list(csv.reader(d1,delimiter='|'))
+	day1_data=list(csv.reader(d1,delimiter='|'))
+	try:
+		i=1
+		while i<len(day1_data):
+			in_qry="INSERT INTO Day1(TransactionId,PolicyId,PolicyNumber,PolicYHolderName,PolicyStartDate,PolicyExpirationDate,PolicyType,ClaimID,ClaimType,ClaimApplyDate,ClaimServiceDate,ClaimStatus,ClaimCompletionDate)values{}"
+			s=in_qry.format(tuple(day1_data[i]))
+			cur.execute(s)
+			cur.execute("commit")
+			i=i+1
+		#cur.execute("TRUNCATE TABLE Day1")
+	except Error as e:
+		print("error while inserting :",e)
 		
