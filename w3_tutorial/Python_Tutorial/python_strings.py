@@ -57,3 +57,25 @@ i = "Chandra is a Python Devel"
 if 'python' not in i:
     print('No, the word python not identified in text g')
 print('<----------------------------<<Slicing Strings>>--------------------------->')
+# Slicing : You can return a range of characters by using the slice syntax.
+print('Specify the start index and the end index, separated by a colon, to return a part of the string.')
+# Get the characters from position 2 to position 5 (not included):
+j = "Hello, Chandra!"
+print(j[2:5])
+print('Note: The first character has index 0.')
+print('Slice From the Start:')
+# By leaving out the start index, the range will start at the first character:
+# Get the characters from the start to position 5 (not included):"
+k = "Hello, Chandra!"
+print(k[:5])
+print('Slice To the End:')
+# By leaving out the end index, the range will go to the end:
+# Get the characters from the start to position 5 (not included):"
+m = "Hello, Chandra!"
+print(m[2:])
+print('Negative Indexing:')
+# Use negative indexes to start the slice from the end of the string:
+# Get the characters:- From: "o" in "Chandra!" (position -5)
+# To, but not included: "d" in "Chandra!" (position -2):
+n = "Hello, Chandra!"
+print(n[-8:-4])
