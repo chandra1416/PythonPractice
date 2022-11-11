@@ -79,3 +79,25 @@ print('Negative Indexing:')
 # To, but not included: "d" in "Chandra!" (position -2):
 n = "Hello, Chandra!"
 print(n[-8:-4])
+print('<----------------------------<<Python - Modify Strings>>--------------------------->')
+print('Python has a set of built-in methods that you can use on strings.')
+print('(1). Upper Case:The "upper()" method returns the string in upper case:')
+o = "Hello, Chandra!"
+print(o.upper())
+print('(2). Lower Case:The "lower()" method returns the string in lower case:')
+p = "Hello, Chandra!"
+print(p.lower())
+print('(3). Remove Whitespace:The strip() method removes any whitespace from the beginning or the end:')
+# Whitespace is the space before and/or after the actual text, and very often you want to remove this space.
+q = " Hello, Chandra!"
+print(q)
+print(q.strip())
+print('(4). Replace String:The replace() method replaces a string with another string:')
+r = "Hello, Chandra!"
+print(r.replace('Cha', 'A'))
+print('(5). RSplit String:TThe split() method returns a list where the text between the specified separator becomes '
+      'the list items.')
+s = "Hello, Chandra!"
+s_test = "Hello Python Developer!"
+print(s.split(","))
+print(s_test.split(" "))
