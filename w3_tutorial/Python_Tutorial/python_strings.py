@@ -101,3 +101,138 @@ s = "Hello, Chandra!"
 s_test = "Hello Python Developer!"
 print(s.split(","))
 print(s_test.split(" "))
+print('<----------------------------<<(more)Python String Methods>>--------------------------->')
+# Python has a set of built-in methods that you can use on strings.
+print('Note: All string methods returns new values. They do not change the original string.')
+print('(1). Python String capitalize() Method')
+# Upper case the first letter in this sentence:
+t = "hello Chandra, and welcome to my python world."
+t_rslt = t.capitalize()
+print(t_rslt)
+# The capitalize() method returns a string where the first character is upper case, and the rest is lower case.
+# syntax : string.capitalize()
+t_1 = "hello Chandra, and welcome to my PYTHON world."
+t_1_rslt = t_1.capitalize()
+print(t_1_rslt)
+# See what happens if the first character is a number:
+t_2 = '10th June is Chandra Birthday'
+t_2_rslt = t_2.capitalize()
+print(t_2_rslt)
+print('(2). Python String casefold() Method')
+u = ">>Hello Chandra, and Welcome to My PYTHON World."
+u_rslt = u.casefold()
+print(u_rslt)
+# syntax : string.casefold()
+print('(3). Python String center() Method')
+# The center() method will center align the string, using a specified character
+# (space is default) as the fill character.
+v = "Chandra"
+v_rslt = v.center(50)
+print(v_rslt)
+# syntax : string.center(length, character)
+# length	Required. The length of the returned string
+# character	Optional. The character to fill the missing space on each side. Default is " " (space)
+v_1 = "Chandra"
+v_1_rslt = v_1.center(50, "*")
+print(v_1_rslt)
+print('(4). Python String count() Method')
+# Return the number of times the value "apple" appears in the string:
+# syntax : string.count(value, start, end)
+# value	Required. A String. The string to value to search for
+# start	Optional. An Integer. The position to start the search. Default is 0
+# end	Optional. An Integer. The position to end the search. Default is the end of the string
+w = "I love India. India ais my birth place"
+w_rslt = w.count("India")
+print(w_rslt)
+w_1 = "I love India. India ais my birth place"
+w_1_rslt = w_1.count("India", 5, 18)
+print(w_1_rslt)
+print('(5). Python String encode() Method')
+# syntax : string.encode(encoding=encoding, errors=errors)
+# The encode() method encodes the string, using the specified encoding.
+# If no encoding is specified, UTF-8 will be used.
+print('UTF-8 encode the string:')
+x = "My name is Chandra"
+x_rslt = x.encode()
+print(x_rslt)
+print('UTF-8 encode the string:')
+y = "My name is Chåndra"
+txt = "My name is Ståle"
+print(y.encode(encoding="ascii", errors="backslashreplace"))
+print(y.encode(encoding="ascii", errors="ignore"))
+print(y.encode(encoding="ascii", errors="namereplace"))
+print(y.encode(encoding="ascii", errors="replace"))
+print(y.encode(encoding="ascii", errors="xmlcharrefreplace"))
+print('(6). Python String () Method')
+# Check if the string ends with a punctuation sign (.):
+z = "My name is Chandra. "
+z_rslt = z.endswith(". ")
+print(z_rslt)
+# The endswith() method returns True if the string ends with the specified value, otherwise False.
+# syntax : string.endswith(value, start, end)
+# value	: Required. The value to check if the string ends with
+# start : Optional. An Integer specifying at which position to start the search
+# end	: Optional. An Integer specifying at which position to end the search
+z_1 = "My name is Chandra. "
+z_1_rslt = z_1.endswith("dra. ", 10, 20)
+print(z_1_rslt)
+print('(7). Python String expandtabs() Method')
+# The expandtabs() method sets the tab size to the specified number of whitespaces.
+# syntax : string.expandtabs(tabsize)
+# tabsize	Optional. A number specifying the tabsize. Default tabsize is 8
+_a = "H\te\tl\tl\to"
+print(_a)
+print(_a.expandtabs())
+print(_a.expandtabs(2))
+print(_a.expandtabs(4))
+print(_a.expandtabs(10))
+
+print('(8). Python String find() Method')
+# The find() method finds the first occurrence of the specified value. The find() method returns -1 if the value is
+# not found. The find() method is almost the same as the index() method, the only difference is that the index()
+# method raises an exception if the value is not found. (See example below)
+# syntax : string.find(value, start, end)
+_b = "Indian Love poets are from Telugu and one  Love Poet is Chandra"
+_b_rslt = _b.find("Love")
+print(_b_rslt)
+_b_1 = "Indian Love poets are from Telugu and one  Love Poet is Chandra"
+_b_1_rslt = _b_1.find("Love", 30, 50)
+print(_b_1_rslt)
+print(_b_1.find("q"))
+print('(9). PPython String format() Method')
+# The format() method formats the specified value(s) and insert them inside the string's placeholder.
+# The placeholder is defined using curly brackets: {}.
+# Read more about the placeholders in the Placeholder section below.
+# The format() method returns the formatted string.
+# syntax : string.format(value1, value2...)
+_c1 = "My name is {fname}, I'm {age}".format(fname="Chandra", age=25)
+_c2 = "My name is {0}, I'm {1}".format("Chandra", 25)
+_c3 = "My name is {}, I'm {}".format("Chandra", 25)
+print(_c1)
+print(_c2)
+print(_c3)
+
+print('(10). Python String index() Method')
+# The index() method finds the first occurrence of the specified value. The index() method raises an exception if the
+# value is not found. The index() method is almost the same as the find() method, the only difference is that the
+# find() method returns -1 if the value is not found. (See example below)
+# syntax : string.index(value, start, end)
+# value	: Required. The value to search for
+# start : 	Optional. Where to start the search. Default is 0
+# end	: Optional. Where to end the search. Default is to the end of the string
+# Where in the text is the first occurrence of the letter "e"?:
+_d = "Hello, My name is Chandra."
+_d_rslt = _d.index("d")
+print(_d_rslt)
+print('(11). Python String casefold() Method')
+print('(12). Python String casefold() Method')
+print('(13). Python String casefold() Method')
+print('(14). Python String casefold() Method')
+print('(15). Python String casefold() Method')
+print('(16). Python String casefold() Method')
+print('(17). Python String casefold() Method')
+print('(18). Python String casefold() Method')
+print('(19). Python String casefold() Method')
+print('(20). Python String casefold() Method')
+print('(21). Python String casefold() Method')
+print('(22). Python String casefold() Method')
