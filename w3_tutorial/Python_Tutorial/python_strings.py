@@ -211,7 +211,6 @@ _c3 = "My name is {}, I'm {}".format("Chandra", 25)
 print(_c1)
 print(_c2)
 print(_c3)
-
 print('(10). Python String index() Method')
 # The index() method finds the first occurrence of the specified value. The index() method raises an exception if the
 # value is not found. The index() method is almost the same as the find() method, the only difference is that the
@@ -224,15 +223,29 @@ print('(10). Python String index() Method')
 _d = "Hello, My name is Chandra."
 _d_rslt = _d.index("d")
 print(_d_rslt)
-print('(11). Python String casefold() Method')
-print('(12). Python String casefold() Method')
-print('(13). Python String casefold() Method')
-print('(14). Python String casefold() Method')
-print('(15). Python String casefold() Method')
-print('(16). Python String casefold() Method')
-print('(17). Python String casefold() Method')
-print('(18). Python String casefold() Method')
-print('(19). Python String casefold() Method')
-print('(20). Python String casefold() Method')
-print('(21). Python String casefold() Method')
-print('(22). Python String casefold() Method')
+print('(11). Python String isalnum() Method')
+# Check if all the characters in the text are alphanumeric:
+# syntax : string.isalnum()
+_e = "Chandra1416"
+_e_rslt = _e.isalnum()
+print(_e_rslt)
+print('(12). Python String isalpha() Method')
+# Check if all the characters in the text are letters:
+_f = "Chandra1"
+_f_rslt = _f.isalpha()
+print(_f_rslt)
+print('(13). Python String isascii() Method')
+# Check if all the characters in the text are ascii characters:
+_g = "Chandra1"
+_g_rslt = _g.isascii()
+print(_g_rslt)
+print('We need to try more string methods , later on subject revise')
+
+print('<----------------------------<<Python - String Concatenation >>--------------------------->')
+# To concatenate, or combine, two strings you can use the + operator
+_a_ = "chandra"
+_b_ = "mukanagari"
+_c_ = _a_  + _b_
+_d_ = _a_ + "_" + _b_
+print(_c_)
+print(_d_)
