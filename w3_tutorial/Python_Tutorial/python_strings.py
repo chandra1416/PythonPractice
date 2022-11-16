@@ -249,3 +249,20 @@ _c_ = _a_  + _b_
 _d_ = _a_ + "_" + _b_
 print(_c_)
 print(_d_)
+print('<----------------------------<<Python - Format - Strings>>--------------------------->')
+# As we learned in the Python Variables chapter, we cannot combine strings and numbers
+age = 25
+#bio = "My name is Chandra, I am " + age
+#print(bio)
+# we can combine strings and numbers by using the format() method
+# The format() method takes the passed arguments, formats them, and places them in the string where the placeholders {}
+age = 25
+bio = "My name is Chandra, I am {}"
+print(bio.format(age))
+quantity = 3
+itemno = 567
+price = 49.95
+myorder = "I want {} pieces of item {} for {} dollars."
+myorder_1 = "I want to pay {2} dollars for {0} pieces of item {1}."
+print(myorder.format(quantity, itemno, price))
+print(myorder_1.format(quantity, itemno, price))
